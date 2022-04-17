@@ -1,0 +1,9 @@
+django~=3.2.3
+Pillow
+asgiref
+gunicorn
+dj-database-url
+psycopg2-binary
+django-environ
+django-mptt
+requests

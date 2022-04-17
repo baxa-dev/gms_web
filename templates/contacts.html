@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% block menu %}
+    <nav>
+        <ul id="mainmenu">
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'about_company' %}">О компании</a></li>
+            <li><a href="{% url 'services' %}">Услуги</a></li>
+            <li><a href="{% url 'products' %}">Продукция</a></li>
+            <li><a href="{% url 'news' %}">Новости</a></li>
+            <li><a href="{% url 'contacts' %}">Контакты</a></li>
+        </ul>
+    </nav>
+{% endblock menu %}
+{% block content %}
+    <div class="contact mt100" style="background-color: #fff">
+        <div class="container">
+            <div class="contact-info row">
+                <div class=" col-md-12 text-page">
+                    <section class="position: relative; left: -14.5px; box-sizing: border-box; width: 1349px; padding-left: 14.5px; padding-right: 14.5px;">
+                        <div class="row-fluid row-o-content-top row-flex">
+                                <div class="col-sm-12 col-lg-4 col-md-6">
+                                    <div class="mb-5">
+                                        <strong style="font-size: 30px">
+                                            КОНТАКТЫ
+                                        </strong>
+                                    </div>
+                                     <div class="col"><span class="id-color"><i style="color: red; margin-right: 15px" class="fa fa-phone"></i></span>+998 94 614 11 90 </div>
+                                     <div class="col"><span class="id-color"><i style="color: red; margin-right: 15px" class="fa fa-phone"></i></span>+7 914 783 83 98</div>
+                                    <div class="col"><span class="id-color"><i style="color: red; margin-right: 15px" class="fa fa-map-marker"></i></span>Республика Узбекистан, г. Ташкент</div>
+                                </div>
+                                <div class="col-sm-12 col-lg-4 col-md-6 col-has-fill">
+                                    <div class="mb-5">
+                                        <strong style="font-size: 30px;">
+                                            Рабочее время
+                                        </strong>
+                                    </div>
+                                    <div>
+                                       <p>
+                                           <span class="line-height-2"><strong>Понедельник:</strong>&nbsp;&nbsp;&nbsp; с 9:00 до 18:00<br>
+                                                <strong>Вторник:</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;с 9:00 до 18:00<br>
+                                                <strong>Среда:</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;с 9:00 до 18:00<br>
+                                                <strong>Четверг:</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; с 9:00 до 18:00<br>
+                                                <strong>Пятница:</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;с 9:00 до 18:00<br>
+                                                <strong>Суббота:</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;с 10:00 до 14:00<br>
+                                                <strong>Воскресенье:</strong>&nbsp; &nbsp; &nbsp;Закрыто<br>
+                                            </span>
+                                       </p>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-12 col-lg-4 col-md-6">
+                                    <div class="mb-5">
+                                        <strong style="font-size: 30px;">
+                                            Соц. сети
+                                        </strong>
+                                    </div>
+                                    <div class="col social">
+                                    <strong>Facebook:</strong>&nbsp; &nbsp; &nbsp;<a href="https://www.facebook.com/Gmsteeluz-105120088779161"><i class="fa fa-facebook"></i></a><br>
+                                    <strong>Instagram:</strong>&nbsp; &nbsp; &nbsp;<a href="https://www.instagram.com/gmsteeluz/"><i class="fa fa-instagram"></i></a><br>
+                                    <strong>Email:</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.greatmastersteel@mail.ru"><i class="fa fa-envelope-o"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                </div>
+
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+   {% comment %} <div>
+        <h2>Контакты</h2>
+        <div>
+            <h3>Телефон</h3>
+            <div class="body"><p>&nbsp;</p>
+            <p>+998 94 614 11 90</p>
+            <p><strong>Whats App</strong><br>+7 914&nbsp;783 83 98</p>
+            <p><strong>Telegram</strong>&nbsp;</p>
+            <p>+998 94 614 11 90</p></div>
+        </div>
+        <div>
+            <div class="img-bl">
+                <img src="/thumb/2/l3-aTT2b8CqSsXhlOmURgg/64r64/d/rejim-w.png" alt="">
+            </div>
+            <div class="text-bl">
+                <div class="title">График работы</div>
+                <div class="body"><p><br>Пн-Пт: с 9:00 до 18:00; Сб: с 10:00 до 14:00 ; Вс - Выходной<br>
+                    &nbsp;</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="img-bl">
+                <img src="/thumb/2/8soYo4WiR0dtCNSDBVGPKg/64r64/d/email-w.png" alt="">
+            </div>
+            <div class="text-bl">
+                <div class="title">E-mail</div>
+                <div class="body">
+                    <p><br>greatmastersteel@mail.ru</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="img-bl">
+                <img src="/thumb/2/YNoTGjkWc03swBmyVjQICQ/64r64/d/addr-2-w.png" alt="">
+            </div>
+            <div class="text-bl">
+                <div class="title">Адрес</div>
+                <div class="body">
+                    <p>Республика Узбекистан 🇺🇿&nbsp;</p><p>г.Ташкент&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </div>{% endcomment %}
+{% endblock content %}

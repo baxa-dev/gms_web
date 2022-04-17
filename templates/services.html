@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block menu %}
+    <nav>
+        <ul id="mainmenu">
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'about_company' %}">О компании</a></li>
+            <li><a href="{% url 'services' %}">Услуги</a></li>
+            <li><a href="{% url 'products' %}">Продукция</a></li>
+            <li><a href="{% url 'news' %}">Новости</a></li>
+            <li><a href="{% url 'contacts' %}">Контакты</a></li>
+        </ul>
+    </nav>
+{% endblock menu %}
+{% block content %}
+    <section class="servicess" style="margin-top: 180px">
+    <div class="container">
+        <div>
+            <h2>Услуги</h2>
+            {% for service in services %}
+                <div>
+                    <img src="{{ service.imageURL }}" alt="">
+                    <a href="{% url 'item-detail' service.slug service.id %}"><h4 style="padding-top: 36px">{{ service.name }}</h4></a>
+                </div>
+            {% endfor %}
+        </div>
+
+        {% comment %}<div class="pagination">
+            <span class="step-links" style="color: black; display: inline-flex">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1" style="color: black; margin-right: 30px;">&laquo; Начало</a>
+                    <a href="?page={{ page_obj.previous_page_number }}" style="color: black; margin-right: 30px;">{{ page_obj.previous_page_number }}</a>
+                {% endif %}
+
+                <span class="current" style="color: black; border-width: 5px; border-color: black;">{{ page_obj.number }}</span>
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}" style="color: black; margin-left: 30px;">{{ page_obj.next_page_number }}</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}" style="color: black; margin-left: 30px;">Конец &raquo;</a>
+                {% endif %}
+            </span>
+            <br>
+            <span class="current" style="color: black">
+                Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
+            </span>
+        </div>{% endcomment %}
+        <div class="pagination">
+            <span class="step-links" style="color: black; display: inline-flex">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1" style="color: black; margin-right: 30px;">&laquo; Начало</a>
+                    <a href="?page={{ page_obj.previous_page_number }}" style="color: black; margin-right: 30px;">{{ page_obj.previous_page_number }}</a>
+                {% endif %}
+
+                <span class="current" style="cursor:pointer;border: 1px solid;padding: 2px 5px 2px 5px;">{{ page_obj.number }}</span>
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}" style="border: 1px solid;padding: 2px 5px 2px 5px;">{{ page_obj.next_page_number }}</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}" style="border: 1px solid;padding: 2px 5px 2px 5px;">Конец &raquo;</a>
+                {% endif %}
+            </span>
+            <br>
+            <span class="current" style="border: 1px solid; padding: 2px 5px 2px 5px">
+                Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
+            </span>
+        </div>
+    </div>
+    </section>
+{% endblock content %}

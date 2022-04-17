@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block menu %}
+    <nav>
+        <ul id="mainmenu">
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'about_company' %}">О компании</a></li>
+            <li><a href="{% url 'services' %}">Услуги</a></li>
+            <li><a href="{% url 'products' %}">Продукция</a></li>
+            <li><a href="{% url 'news' %}">Новости</a></li>
+            <li><a href="{% url 'contacts' %}">Контакты</a></li>
+        </ul>
+    </nav>
+{% endblock menu %}
+{% block content %}
+     <section id="section-deco-2" class="no-bottom mt100" data-stellar-background-ratio=".2" style="background-position: 50% -40.8px; background-size: cover;">
+            <div class="container" style="background-size: cover;">
+                <div class="row" style="background-size: cover;">
+                    <div class="col-md-6" style="background-size: cover;">
+                        <h2>О комании<span class="tiny-border"></span></h2>
+
+                        <div class="row" style="background-size: cover;">
+                            <div class="col-md-6" style="background-size: cover;">
+                                <h3>Деятельность</h3>
+                                <p>Компания «Great Master Steel» успешно занимается производством кровельных и фасадных
+                                    материалов, а также доборных элементов. Сотрудничая с ведущими зарубежными и
+                                    отечественными производителями исходного сырья, мы готовы
+                                    гарантировать качество своей продукции.</p>
+                            </div>
+
+                            <div class="col-md-6" style="background-size: cover;">
+                                <h3>Сервис</h3>
+                                <p>У нас вы можете заказать материалы по привлекательным ценам – от производителя.
+                                    Сотрудники компании помогут осуществить подбор необходимых материалов,
+                                    проконсультируют вас по любому возникшему вопросу. А при необходимости – помогут
+                                    с расчетом количества материала для решения конкретных задач.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6" style="background-size: cover;">
+                        <img src="{% static 'images/misc/team-1.png' %}" class="img-responsive mt-20" alt="">
+                    </div>
+
+                    <div class="clearfix" style="background-size: cover;"></div>
+                </div>
+            </div>
+        </section>
+{% endblock content %}

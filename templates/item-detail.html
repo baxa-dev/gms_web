@@ -1,0 +1,214 @@
+{% extends 'base.html' %}
+{% block menu %}
+    <nav>
+        <ul id="mainmenu">
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'about_company' %}">О компании</a></li>
+            <li><a href="{% url 'services' %}">Услуги</a></li>
+            <li><a href="{% url 'products' %}">Продукция</a></li>
+            <li><a href="{% url 'news' %}">Новости</a></li>
+            <li><a href="{% url 'contacts' %}">Контакты</a></li>
+        </ul>
+    </nav>
+{% endblock menu %}
+{% block content %}
+    <!-- section begin -->
+    <section id="section-portfolio" aria-label="section-portfolio" class="itemss" style="background-size: cover; margin-top: 125px;">
+        <div class="container" style="background-size: cover;">
+            {% if product %}
+                <div class="row">
+                    <div class="col-md-6 mx-5">
+                        <div >
+                            <h2 class="wow fadeInUp">Продукция<span class="tiny-border"></span></h2>
+                        </div>
+
+                        <div class="spacer-single" style="background-size: cover;"></div>
+
+                        <div id="gallery" class="gallery full-gallery de-gallery pf_full_width col-6 pf_4_cols gallery_border isotope w-100" style="position: relative; overflow: hidden; height: 3215px; background-size: cover;">
+                            <!-- gallery item -->
+                            <div class="item isotope-item" style="width: 70%; top: 0; transform: translate3d(0px, 0px, 0px); background-size: cover;">
+                                <img src="{{ product.imageURL }}" alt="" style="width: 100%; height: auto;">
+                                <h3 class="project-name" style="margin-top: -50px">{{ product.name }}</h3>
+                                <p>{{ product.description }}</p>
+                                <p>{{ product.price }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mx-5">
+                        <div class=" w-100 mx-5">
+                        <div data-bgcolor="#f8f8f8">
+                            <h2>Оставьте заявку
+                                <span class="tiny-border"></span>
+                            </h2>
+                            <form autocomplete="off" name="contactForm" id='contact_form' action="{% url 'item-detail' product.slug product.id %}" method="post">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id='name_error' class='error'>Пожалуйста, введите своё имя.</div>
+                                        <div>
+                                            <input type='text' name='applier_name' id='name' class="form-control" placeholder="Ваше имя">
+                                        </div>
+
+                                        <div id='phone_error' class='error'>Пожалуйста, введите свой номер телефона.</div>
+                                        <div>
+                                            <input type='text' name='applier_phone' id='phone' class="form-control" placeholder="Your Phone">
+                                        </div>
+
+                                        <div id='message_error' class='error'>Пожалуйста, оставьте своё сообщение.</div>
+                                        <div>
+                                            <textarea name='message' id='message' class="form-control" placeholder="Your Message"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div id='submit'>
+                                            <input type='submit' id='send_message' value='Отправить' class="btn btn-line">
+                                        </div>
+                                        <div id='mail_success' class='success'>Ваша заявка принята ! Скоро с вами свяжуться.</div>
+                                        <div id='mail_fail' class='error'>Извините, ваша заявка не принята. Повторите ещё раз !</div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-100" style="margin-top: 50px;">
+
+                </div>
+
+            {% elif service %}
+                {% comment %}<div class="col-md-12">
+                    <h2 class="wow fadeInUp">Услуга<span class="tiny-border"></span></h2>
+                </div>
+
+                <div class="spacer-single" style="background-size: cover;"></div>
+
+                <div id="gallery" class="gallery full-gallery de-gallery pf_full_width pf_4_cols gallery_border isotope" style="position: relative; overflow: hidden; height: 3215px; background-size: cover;">
+                    <!-- gallery item -->
+                    <div class="item isotope-item" style="position: absolute; left: 0; top: 0; transform: translate3d(0px, 0px, 0px); background-size: cover;">
+                        <img src="{{ service.imageURL }}" alt="" style="width: 100%; height: auto;">
+                        <h3 class="project-name">{{ service.name }}</h3>
+                        <p>{{ service.description }}</p>
+                    </div>
+                </div>
+
+                <div class="row mt-100" style="margin-top: 50px;">
+                    <div class="col-md-12">
+                        <div class="padding30" data-bgcolor="#f8f8f8">
+                            <h2>Оставьте заявку
+                                <span class="tiny-border"></span>
+                            </h2>
+                            <form autocomplete="off" name="contactForm" id='contact_form' action="{% url 'item-detail' service.slug service.id %}" method="post">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id='name_error' class='error'>Пожалуйста, введите своё имя.</div>
+                                        <div>
+                                            <input type='text' name='applier_name' id='name' class="form-control" placeholder="Имя">
+                                        </div>
+
+                                        <div id='phone_error' class='error'>Пожалуйста, введите свой номер телефона.</div>
+                                        <div>
+                                            <input type='text' name='applier_phone' id='phone' class="form-control" placeholder="Номер телефона">
+                                        </div>
+
+                                        <div id='message_error' class='error'>Пожалуйста, оставьте своё сообщение.</div>
+                                        <div>
+                                            <textarea name='message' id='message' class="form-control" placeholder="Сообщение"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div id='submit'>
+                                            <input type='submit' id='send_message' value='Отправить' class="btn btn-line">
+                                        </div>
+                                        <div id='mail_success' class='success'>Ваша заявка принята ! Скоро с вами свяжуться.</div>
+                                        <div id='mail_fail' class='error'>Извините, ваша заявка не принята. Повторите ещё раз !</div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>{% endcomment %}
+                <div class="row">
+                    <div class="col-md-6 mx-5">
+                        <div >
+                            <h2 class="wow fadeInUp">Услуга<span class="tiny-border"></span></h2>
+                        </div>
+
+                        <div class="spacer-single" style="background-size: cover;"></div>
+
+                        <div id="gallery" class="gallery full-gallery de-gallery pf_full_width col-6 pf_4_cols gallery_border isotope w-100" style="position: relative; overflow: hidden; height: 3215px; background-size: cover;">
+                            <!-- gallery item -->
+                            <div class="item isotope-item" style="width: 70%; top: 0; transform: translate3d(0px, 0px, 0px); background-size: cover;">
+                                <img src="{{ service.imageURL }}" alt="" style="width: 100%; height: auto;">
+                                <h3 class="project-name">{{ service.name }}</h3>
+                                <p>{{ service.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mx-5">
+                        <div class=" w-100 mx-5">
+                        <div data-bgcolor="#f8f8f8">
+                            <h2>Оставьте заявку
+                                <span class="tiny-border"></span>
+                            </h2>
+                            <form autocomplete="off" name="contactForm" id='contact_form' action="{% url 'item-detail' service.slug service.id %}" method="post">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id='name_error' class='error'>Пожалуйста, введите своё имя.</div>
+                                        <div>
+                                            <input type='text' name='applier_name' id='name' class="form-control" placeholder="Ваше имя">
+                                        </div>
+
+                                        <div id='phone_error' class='error'>Пожалуйста, введите свой номер телефона.</div>
+                                        <div>
+                                            <input type='text' name='applier_phone' id='phone' class="form-control" placeholder="Your Phone">
+                                        </div>
+
+                                        <div id='message_error' class='error'>Пожалуйста, оставьте своё сообщение.</div>
+                                        <div>
+                                            <textarea name='message' id='message' class="form-control" placeholder="Your Message"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div id='submit'>
+                                            <input type='submit' id='send_message' value='Отправить' class="btn btn-line">
+                                        </div>
+                                        <div id='mail_success' class='success'>Ваша заявка принята ! Скоро с вами свяжуться.</div>
+                                        <div id='mail_fail' class='error'>Извините, ваша заявка не принята. Повторите ещё раз !</div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-100" style="margin-top: 50px;">
+
+                </div>
+
+
+            {% elif news %}
+                <div class="col-md-12">
+                    <h2 class="wow fadeInUp">Новости<span class="tiny-border"></span></h2>
+                </div>
+
+                <div class="spacer-single" style="background-size: cover;"></div>
+
+                <div id="gallery" class="gallery full-gallery de-gallery pf_full_width pf_4_cols gallery_border isotope" style="position: relative; overflow: hidden; height: 3215px; background-size: cover;">
+                    <div class="item isotope-item" style="position: absolute; left: 0; top: 0; transform: translate3d(0px, 0px, 0px); background-size: cover;">
+                        <h2>{{ news.title }}</h2>
+                        <p>{{ news.text }}</p>
+                        {% comment %}<h3 class="project-name">{{ news.title }}</h3>{% endcomment %}
+                        <h5>{{ news.date }}</h5>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+    <!-- section close -->
+{% endblock content %}

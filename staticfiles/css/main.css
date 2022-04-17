@@ -1,0 +1,58 @@
+.catalog-list{
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    margin: 0 -0.2rem;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+}
+
+.product-item{
+    float: none;
+    height: auto;
+    flex-shrink: 0;
+    margin-bottom: 0.2rem;
+}
+
+.product-item__inner{
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0.18rem 0.2rem;
+    min-height: 100%;
+    background: #fff;
+    border-radius: 0.04rem;
+    padding: 0.2rem 0.25rem 0.15rem;
+    box-shadow: 0 0 0.1rem 0 rgb(0 0 0 / 7%);
+}
+div .btn{
+    color: #9F080E;
+}
+div .btn:hover{
+    background-color: #9F080E;
+    color: #000 !important;
+}
+#section-services .btn:hover{
+    color: #fff !important;
+    border-color: #9F080E !important;
+}
+#section-portfolio .btn:hover{
+    border-color: #9F080E !important;
+    color: #fff !important;
+}
+#section-news .btn:hover{
+    border-color: #9F080E !important;
+    color: #fff !important;
+}
+.card{
+   width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin: 10px;
+}
+.card img{
+    width: initial;
+    height: 80%;
+}
