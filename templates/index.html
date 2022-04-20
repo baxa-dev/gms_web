@@ -226,7 +226,7 @@
                                     <img style="width: 85%; padding-top: 20px;padding-left: 40px;" src="{{ service.imageURL }}" class="img-responsive" alt="">
                                 </a>
                             </figure>
-                            <a href="{% url 'item-detail' service.slug service.id %}">
+                            <a href="{% url 'item-detail' service.slug service.id %}" style="text-decoration: none">
                                 <h3>{{ service.name }}</h3>
                             </a>
                         </div>
@@ -249,10 +249,12 @@
                     {% if product.on_main %}
                         <div class="col-md-4 col-sm-6 mb30 name" style="background-size: cover;">
                             <figure class="pic-hover hover-scale mb20">
-                                <span class="bg-overlay" style="width: 100%; height: 224px;"></span>
-                                <img style="width: 85%; padding-top: 20px;padding-left: 40px;" src="{{ product.imageURL }}" class="img-responsive" alt="">
+                                <a href="{% url 'item-detail' product.slug product.id %}">
+                                    <span class="bg-overlay" style="width: 100%; height: 224px;"></span>
+                                    <img style="width: 85%; padding-top: 20px;padding-left: 40px;" src="{{ product.imageURL }}" class="img-responsive" alt="">
+                                </a>
                             </figure>
-                            <a href="{% url 'item-detail' product.slug product.id %}">
+                            <a href="{% url 'item-detail' product.slug product.id %}" style="text-decoration: none">
                                 <h3>{{ product.name }}</h3>
                             </a>
                         </div>
@@ -326,7 +328,7 @@
                                     <div class="post-text">
                                         <h3>{{ new.title }}</h3><br>
                                         <a href="{% url 'item-detail' new.date new.id %}" class="read_more mt10">
-                                            Подробнее <i style="color: red;" class="fa fa-chevron-right id-color"></i></a>
+                                            Подробнее <i style="color: #9F080E;" class="fa fa-chevron-right id-color"></i></a>
                                     </div>
                                 </div>
                             </li>
@@ -345,7 +347,6 @@
     <section> {% comment %}id="section-contact"{% endcomment %}
         <div class="container">
             <div class="row mt-100">
-
                 <div class="col-md-12">
                     <div class="padding30" data-bgcolor="#f8f8f8">
                         <h2>Оставьте заявку

@@ -31,8 +31,10 @@ div .btn{
     color: #9F080E;
 }
 div .btn:hover{
-    color: #fff;
+    color: #FFFFFF;
     border-color: transparent;
+    /*color: #9F080E;*/
+    /*border-color: #9F080E;*/
     font-weight: bold;
     background-color: #222222;
 }
@@ -62,7 +64,7 @@ div .btn:hover{
     height: 80%;
 }
 .container{
-    width: 1400px;
+    width: 1200px;
 }
 /*.sidenav li{
     background-color: #e8e8e8;
@@ -82,4 +84,7 @@ div .btn:hover{
     text-decoration: none;
     text-align: center;
     margin-left: -40px;
+}
+.name h3:hover{
+    color: #9F080E;
 }

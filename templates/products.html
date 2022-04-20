@@ -50,7 +50,7 @@
                                         <img style="width: 85%; padding-top: 20px;padding-left: 40px;" src="{{ product.imageURL }}" class="img-responsive" alt="">
                                         </a>
                                     </figure>
-                                    <a href="{% url 'item-detail' product.slug product.id %}" class="name">
+                                    <a href="{% url 'item-detail' product.slug product.id %}" style="text-decoration: none">
                                         <h3>{{ product.name }}</h3>
                                     </a>
                                 </div>
@@ -67,7 +67,7 @@
                                             <img style="width: 85%; padding-top: 20px;padding-left: 40px;" src="{{ product.imageURL }}" class="img-responsive" alt="">
                                             </a>
                                         </figure>
-                                        <a href="{% url 'item-detail' product.slug product.id %}">
+                                        <a href="{% url 'item-detail' product.slug product.id %}" style="text-decoration: none">
                                             <h3>{{ product.name }}</h3>
                                         </a>
                                     </div>
@@ -84,7 +84,7 @@
                                         <img style="width: 85%; padding-top: 20px;padding-left: 40px;" src="{{ product.imageURL }}" class="img-responsive" alt="">
                                         </a>
                                    </figure>
-                                    <a href="{% url 'item-detail' product.slug product.id %}">
+                                    <a href="{% url 'item-detail' product.slug product.id %}" style="text-decoration: none">
                                         <h3>{{ product.name }}</h3>
                                     </a>
                                 </div>
@@ -114,208 +114,4 @@
            </div>
         </div>
     </div>
-
-
-
-    {% comment %}<section class="mt100">
-        <div class="container">
-            <div class="catalog" style="display: flex; align-items: flex-start; justify-content: space-between">
-            <div class="sidebar">
-                <h2>Каталог</h2>
-                <div>
-                    <ul style="list-style: none">
-                        <li><a style="text-decoration: none;" href="{% url 'products' %}">Все</a></li>
-                        {% for category in categories %}
-                            <li>
-                                <a style="text-decoration: none;" href="{% url 'category_products' category.slug  %}">{{ category.category }}</a>
-                                <ul>
-                                    {% for subcategory in subcategories %}
-                                        {% if subcategory.category_slug.slug == category.slug %}
-                                            <li>
-                                                <a style="text-decoration: none;" href="{% url 'subcategory_products' category.slug subcategory.slug %}">
-                                                    {{ subcategory.sub_category }}
-                                                </a>
-                                            </li>
-                                        {% endif %}
-                                    {% endfor %}
-                                </ul>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-            <ul class="card-desk" >
-                <li class="card">
-                    <div class="card-body" style="position:relative;">
-                        <h2 class="card-title">Товары</h2>
-                        {% if subcategory_products %}
-                            <h4 class="card-text">subcategory_products</h4>
-                            {% for product in subcategory_products %}
-                                <div style="display: block">
-                                    <img src="{{ product.imageURL }}" alt="">
-                                    <h4>{{ product.name }}</h4>
-                                    <p>{{ product.description }}</p>
-                                </div>
-                                <div class="item education isotope-item" style="transform: translate3d(0px, 0px, 0px); background-size: cover;">
-                                    <div class="picframe" style="height: 258px; background-size: cover;">
-                                        <a href="{% url 'item-detail' product.slug product.id %}">  ?product={{ product.slug }}
-                                            <span class="overlay" style="opacity: 0;">
-                                                <span class="pf_text">
-                                                    <span class="project-name">{{ product.name }}</span>
-                                                </span>
-                                            </span>
-                                        </a>
-                                        <img src="{{ product.imageURL }}" alt="" style="width: 100%; height: auto;">
-                                    </div>
-                                </div>
-                            {% endfor %}
-                        {% elif category_products %}
-                            <h4>category_products</h4>
-                            {% for product in category_products %}
-                                {% if not product.subcategory_slug %}
-                                    <div style="display: block">
-                                        <img src="{{ product.imageURL }}" alt="">
-                                        <h4>{{ product.name }}</h4>
-                                        <p>{{ product.description }}</p>
-                                    </div>
-                                    <div class="item education isotope-item" style=" transform: translate3d(0px, 0px, 0px); background-size: cover;">
-                                        <div class="picframe" style="height: 258px; background-size: cover;">
-                                            <a href="{% url 'item-detail' product.slug product.id %}">
-                                                <span class="overlay" style="opacity: 0; width: 100%">
-                                                    <span class="pf_text">
-                                                        <span class="project-name">{{ product.name }}</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                            <img src="{{ product.imageURL }}" alt="" style="width: 100%; height: auto;">
-                                        </div>
-                                    </div>
-                                {% endif %}
-                            {% endfor %}
-                        {% else %}
-                            <h4>all products</h4>
-                            <div style="display: flex">
-                                {% for product in products %}
-                                    <div style="display: block">
-                                        <img src="{{ product.imageURL }}" alt=""  >
-                                        <h4>{{ product.name }}</h4>
-                                        <p>{{ product.description }}</p>
-                                    </div>
-                                    <div class="item education isotope-item" style=" transform: translate3d(0px, 0px, 0px); background-size: cover;">
-                                        <div class="picframe" style="height: 258px; background-size: cover;">
-                                            <a href="{% url 'item-detail' product.slug product.id %}">
-                                                <span class="overlay" style="opacity: 0;">
-                                                    <span class="pf_text">
-                                                        <span class="project-name">{{ product.name }}</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                            <img src="{{ product.imageURL }}" alt="" style="width: 100%; height: auto;">
-                                        </div>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                        {% endif %}
-                    </div>
-                </li>
-            </li>
-
-
-
-                  <li class="card">
-                    <div class="card-body" style="position:relative;">
-                        <h2 class="card-title">Товары</h2>
-                        {% if subcategory_products %}
-                            <h4 class="card-text">subcategory_products</h4>
-                            {% for product in subcategory_products %}
-                                <div style="display: block">
-                                    <img src="{{ product.imageURL }}" alt="">
-                                    <h4>{{ product.name }}</h4>
-                                    <p>{{ product.description }}</p>
-                                </div>
-                                <div class="item education isotope-item" style="transform: translate3d(0px, 0px, 0px); background-size: cover;">
-                                    <div class="picframe" style="height: 258px; background-size: cover;">
-                                        <a href="{% url 'item-detail' product.slug product.id %}">  ?product={{ product.slug }}
-                                            <span class="overlay" style="opacity: 0;">
-                                                <span class="pf_text">
-                                                    <span class="project-name">{{ product.name }}</span>
-                                                </span>
-                                            </span>
-                                        </a>
-                                        <img src="{{ product.imageURL }}" alt="" style="width: 100%; height: auto;">
-                                    </div>
-                                </div>
-                            {% endfor %}
-                        {% elif category_products %}
-                            <h4>category_products</h4>
-                            {% for product in category_products %}
-                                {% if not product.subcategory_slug %}
-                                    <div style="display: block">
-                                        <img src="{{ product.imageURL }}" alt="">
-                                        <h4>{{ product.name }}</h4>
-                                        <p>{{ product.description }}</p>
-                                    </div>
-                                    <div class="item education isotope-item" style=" transform: translate3d(0px, 0px, 0px); background-size: cover;">
-                                        <div class="picframe" style="height: 258px; background-size: cover;">
-                                            <a href="{% url 'item-detail' product.slug product.id %}">
-                                                <span class="overlay" style="opacity: 0; width: 100%">
-                                                    <span class="pf_text">
-                                                        <span class="project-name">{{ product.name }}</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                            <img src="{{ product.imageURL }}" alt="" style="width: 100%; height: auto;">
-                                        </div>
-                                    </div>
-                                {% endif %}
-                            {% endfor %}
-                        {% else %}
-                            <h4>all products</h4>
-                            <div style="display: flex">
-                                {% for product in products %}
-                                    <div style="display: block">
-                                        <img src="{{ product.imageURL }}" alt=""  >
-                                        <h4>{{ product.name }}</h4>
-                                        <p>{{ product.description }}</p>
-                                    </div>
-                                    <div class="item education isotope-item" style=" transform: translate3d(0px, 0px, 0px); background-size: cover;">
-                                        <div class="picframe" style="height: 258px; background-size: cover;">
-                                            <a href="{% url 'item-detail' product.slug product.id %}">
-                                                <span class="overlay" style="opacity: 0;">
-                                                    <span class="pf_text">
-                                                        <span class="project-name">{{ product.name }}</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                            <img src="{{ product.imageURL }}" alt="" style="width: 100%; height: auto;">
-                                        </div>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                        {% endif %}
-                    </div>
-            </li>
-                <div class="pagination">
-                    <span class="step-links" style="color: black; display: inline-flex">
-                        {% if page_obj.has_previous %}
-                            <a href="?page=1" style="color: black; margin-right: 30px;">&laquo; Начало</a>
-                            <a href="?page={{ page_obj.previous_page_number }}" style="color: black; margin-right: 30px;">{{ page_obj.previous_page_number }}</a>
-                        {% endif %}
-
-                        <span class="current" style="cursor:pointer;border: 1px solid;padding: 2px 5px 2px 5px;">{{ page_obj.number }}</span>
-
-                        {% if page_obj.has_next %}
-                            <a href="?page={{ page_obj.next_page_number }}" style="border: 1px solid;padding: 2px 5px 2px 5px;">{{ page_obj.next_page_number }}</a>
-                            <a href="?page={{ page_obj.paginator.num_pages }}" style="border: 1px solid;padding: 2px 5px 2px 5px;">Конец &raquo;</a>
-                        {% endif %}
-                    </span>
-                    <br>
-                    <span class="current" style="border: 1px solid; padding: 2px 5px 2px 5px">
-                        Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
-                    </span>
-                </div>
-            </ul>
-        </div>
-    </div>
-    </section>{% endcomment %}
 {% endblock content %}
