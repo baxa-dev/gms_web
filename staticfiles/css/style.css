@@ -109,7 +109,7 @@ color:#fff;
 padding:10px 0 10px 0;
 width:100%;
 z-index:100;
-background:rgba(0,0,0,.2);
+background:#242424;
 }
 header .info .col{
 display:inline-block;
@@ -148,7 +148,7 @@ background:rgba(0,0,0,0.5);
 }
 
 header.transparent{
-background:rgba(0,0,0,0.0);
+background:#222222;
 }
 
 header.autoshow{
@@ -231,6 +231,10 @@ z-index:1200 !important;
 }
 header.smaller div#logo {
 line-height:48px;
+}
+.loggo img{
+	width: 65%;
+	height: 80%;
 }
 header.smaller.scroll-light{
 background:#fff;
@@ -1369,7 +1373,7 @@ color:#fff;
 }
 
 .de_light a{
-color:#888;
+	color:#888;
 }
 
 .de_light a:hover{
@@ -2593,9 +2597,9 @@ border-radius:1px;
 -webkit-border-radius:1px;
 }
 .social-icons i:hover{
-background:#fff;
-border-color:#eceff3;
-color:#333;
+	background:#9F080E ;
+	border-color:#eceff3;
+	color:#333;
 }
 
 /*
@@ -3740,7 +3744,6 @@ figure:hover+span {
 .sidenav {
   width: 185px;
   z-index: 1;
-  top: 20px;
   left: 10px;
   overflow-x: hidden;
   padding: 8px 0;
@@ -3748,12 +3751,17 @@ figure:hover+span {
 
 .sidenav li {
 	text-decoration: none;
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #2196F3;
-  display: block;
+  	padding: 6px 8px 6px 16px;
+ 	text-decoration: none;
+  	font-size: 25px;
+  	color: #2196F3;
+  	display: block;
 	margin-left: -25px;
+
+}
+.sidenav ul li a:hover{
+	color: #9F080E;
+	font-weight: bold;
 }
 .sidenav li a{
 	text-decoration: none;
@@ -4777,9 +4785,10 @@ height:100%;
 z-index:1;
 }
 .pic-hover{
-width:100%;
-position:relative;
-overflow:hidden;
+	width:90%;
+	position:relative;
+	overflow:hidden;
+	border-radius: 15px;
 }
 
 i.btn-action-hide{
@@ -4787,7 +4796,7 @@ opacity:0;
 }
 
 .pic-hover:hover .bg-overlay{
-background:rgba(0,0,0,.5);
+	background:rgba(0,0,0,.5);
 }
 
 .pic-hover:hover i.btn-action-hide{
@@ -4935,14 +4944,15 @@ background:#f8f8f8;
 /* mouse scroll icon close */
 
 a.read_more{
-display:inline-block;
-font-weight:bold;
-color:#222222;
-text-decoration:none;
+	display:inline-block;
+	font-weight:bold;
+	color:#222222;
+	text-decoration:none;
+	margin-top: 20px;
 }
 
 a.read_more:hover{
-color:#707070;
+color:#9F080E;
 }
 
 a.read_more i{

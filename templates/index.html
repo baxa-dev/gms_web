@@ -219,29 +219,16 @@
                 <div class="spacer-single" style="background-size: cover;"></div>
                 {% for service in services %}
                     {% if service.on_main %}
-                       {% comment %} <div class="col-md-4 col-sm-6 mb30 mt30" style="background-size: cover;">
+                        <div class="col-md-4 col-sm-6 mb30 name" style="background-size: cover;">
                             <figure class="pic-hover hover-scale mb20">
-                                <img src="https://picsum.photos/300/200?image=611" />
-                                <span class="center-xy " style="left: 142.5px; top: 77px;">
-                                    <a href="{% url 'item-detail' service.id %}"><i class="fa fa-plus btn-action btn-action-hide"></i></a>
-                                    <a href="{% url 'item-detail' service.slug service.id %}">Подробнее</a>  ?service={{ service.name }}
-
-                                </span>
-                                <span class="bg-overlay"></span>
-                                <img src="{{ photo.imageURL }}" class="img-responsive" alt="">
+                                <a href="{% url 'item-detail' service.slug service.id %}">
+                                    <span class="bg-overlay" style="width: 100%; height: 224px;"></span>
+                                    <img style="width: 85%; padding-top: 20px;padding-left: 40px;" src="{{ service.imageURL }}" class="img-responsive" alt="">
+                                </a>
                             </figure>
-                            <h3>{{ service.name }}</h3>
-
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
-
-
-                        </div>{% endcomment %}
-                        <div class="col-md-4 col-sm-6 mb30" style="background-size: cover;">
-                            <figure class="pic-hover hover-scale mb20">
-                                <span class="bg-overlay" style="width: 100%; height: 224px;"></span>
-                                <img style="width: 100%;" src="{{ service.imageURL }}" class="img-responsive" alt="">
-                            </figure>
-                            <a href="{% url 'item-detail' service.slug service.id %}" style="text-decoration: none;"><h3>{{ service.name }}</h3></a>
+                            <a href="{% url 'item-detail' service.slug service.id %}">
+                                <h3>{{ service.name }}</h3>
+                            </a>
                         </div>
                     {% endif %}
                 {% endfor %}
@@ -260,12 +247,14 @@
                 <div class="spacer-single" style="background-size: cover;"></div>
                 {% for product in products %}
                     {% if product.on_main %}
-                        <div class="col-md-4 col-sm-6 mb30" style="background-size: cover;">
+                        <div class="col-md-4 col-sm-6 mb30 name" style="background-size: cover;">
                             <figure class="pic-hover hover-scale mb20">
-                                <span class="bg-overlay" style="width: 350px; height: 255px;"></span>
-                                <img style="width: 100%;" src="{{ product.imageURL }}" class="img-responsive" alt="">
+                                <span class="bg-overlay" style="width: 100%; height: 224px;"></span>
+                                <img style="width: 85%; padding-top: 20px;padding-left: 40px;" src="{{ product.imageURL }}" class="img-responsive" alt="">
                             </figure>
-                            <a href="{% url 'item-detail' product.slug product.id %}" style="text-decoration: none;"><h3>{{ product.name }}</h3></a>
+                            <a href="{% url 'item-detail' product.slug product.id %}">
+                                <h3>{{ product.name }}</h3>
+                            </a>
                         </div>
                     {% endif %}
                 {% endfor %}

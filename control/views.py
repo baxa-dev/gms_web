@@ -83,7 +83,7 @@ def all_products_view(request):
     products = Product.objects.all()
 
     page_num = request.GET.get("page")
-    paginator = Paginator(products, 8)
+    paginator = Paginator(products, 4)
     page_obj = paginator.get_page(page_num)
     pge = paginator.num_pages
     print(pge)
@@ -103,7 +103,7 @@ def services_view(request):
     services = Service.objects.all()
 
     page_num = request.GET.get("page")
-    paginator = Paginator(services, 3)
+    paginator = Paginator(services, 6)
     page_obj = paginator.get_page(page_num)
     pge = paginator.num_pages
     print(pge)

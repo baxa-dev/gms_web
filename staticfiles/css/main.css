@@ -31,19 +31,24 @@ div .btn{
     color: #9F080E;
 }
 div .btn:hover{
-    background-color: #9F080E;
-    color: #000 !important;
+    color: #fff;
+    border-color: transparent;
+    font-weight: bold;
+    background-color: #222222;
 }
 #section-services .btn:hover{
     color: #fff !important;
+    background-color: #9F080E;
     border-color: #9F080E !important;
 }
 #section-portfolio .btn:hover{
     border-color: #9F080E !important;
+    background-color: #9F080E;
     color: #fff !important;
 }
 #section-news .btn:hover{
     border-color: #9F080E !important;
+    background-color: #9F080E;
     color: #fff !important;
 }
 .card{
@@ -55,4 +60,26 @@ div .btn:hover{
 .card img{
     width: initial;
     height: 80%;
+}
+.container{
+    width: 1400px;
+}
+/*.sidenav li{
+    background-color: #e8e8e8;
+}*/
+.current{
+    color: #fff !important;
+    font-weight: bold;
+    background-color: #222222;
+}
+.current:hover{
+    color: #fff !important;
+    font-weight: bold;
+    background-color: #222222 !important;
+}
+
+.name h3{
+    text-decoration: none;
+    text-align: center;
+    margin-left: -40px;
 }

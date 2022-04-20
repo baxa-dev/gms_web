@@ -14,9 +14,9 @@
 {% block content %}
 <!-- Page Content -->
     <div style="background-color: #fff" class="mt100">
-        <div class="container pt-5">
-           <div class="row">
-                <div class="sidenav col-6">
+        <div class="container-fluid pt-5">
+           <div class="row pt-5">
+                <div class="sidenav col-6 col-lg-6 px-5 mx-3">
                     <h2>Каталог</h2>
                     <ul>
                         <li><a style="text-decoration: none;" href="{% url 'products' %}">Все</a></li>
@@ -38,49 +38,55 @@
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="zooom col-10" style="margin-top: 10px;">
-                    <h2>Продукты</h2>
+                <div class="zooom col-10 col-lg-10" style="margin-top: 10px;margin-left: 24px;">
+                    <h2 style="margin-left: 60px;">Продукты</h2>
                     {% if subcategory_products %}
-                        <div>   {% comment %}style="display: flex" class="col-lg-6 col-md-4"{% endcomment %}
+                        <div class="text-align-center" style="margin-left: 55px;">   {% comment %}style="display: flex" class="col-lg-6 col-md-4"{% endcomment %}
                             {% for product in subcategory_products %}
-                                <div class="col-md-4 col-sm-6 mb30" style="background-size: cover;">
+                                <div class="col-md-4 col-sm-6 mb30 name" style="background-size: cover;">
                                     <figure class="pic-hover hover-scale mb20">
                                         <a href="{% url 'item-detail' product.slug product.id %}">
                                         <span class="bg-overlay" style="width: 100%; height: 224px;"></span>
-                                        <img style="width: 100%;" src="{{ product.imageURL }}" class="img-responsive" alt="">
+                                        <img style="width: 85%; padding-top: 20px;padding-left: 40px;" src="{{ product.imageURL }}" class="img-responsive" alt="">
                                         </a>
                                     </figure>
-                                    <a href="{% url 'item-detail' product.slug product.id %}" style="text-decoration: none;"><h3>{{ product.name }}</h3></a>
+                                    <a href="{% url 'item-detail' product.slug product.id %}" class="name">
+                                        <h3>{{ product.name }}</h3>
+                                    </a>
                                 </div>
                             {% endfor %}
                         </div>
                     {% elif category_products %}
-                        <div>
+                        <div class="text-align-center" style="margin-left: 55px;">
                             {% for product in category_products %}
-                                {% if not product.subcategory_slug %}
-                                    <div class="col-md-4 col-sm-6 mb30" style="background-size: cover;">
+                                {% comment %}{% if not product.subcategory_slug %}{% endcomment %}
+                                    <div class="col-md-4 col-sm-6 mb30 name" style="background-size: cover;">
                                         <figure class="pic-hover hover-scale mb20">
                                             <a href="{% url 'item-detail' product.slug product.id %}">
                                             <span class="bg-overlay" style="width: 100%; height: 224px;"></span>
-                                            <img style="width: 100%;" src="{{ product.imageURL }}" class="img-responsive" alt="">
+                                            <img style="width: 85%; padding-top: 20px;padding-left: 40px;" src="{{ product.imageURL }}" class="img-responsive" alt="">
                                             </a>
                                         </figure>
-                                        <a href="{% url 'item-detail' product.slug product.id %}" style="text-decoration: none;"><h3>{{ product.name }}</h3></a>
+                                        <a href="{% url 'item-detail' product.slug product.id %}">
+                                            <h3>{{ product.name }}</h3>
+                                        </a>
                                     </div>
-                                {% endif %}
+                                {% comment %}{% endif %}{% endcomment %}
                             {% endfor %}
                         </div>
                     {% else %}
-                        <div>
+                        <div class="text-align-center" style="margin-left: 55px;">
                             {% for product in products %}
-                                <div class="col-md-4 col-sm-6 mb30" style="background-size: cover;">
+                                <div class="col-md-4 col-sm-6 mb30 name" style="background-size: cover;">
                                     <figure class="pic-hover hover-scale mb20">
                                         <a href="{% url 'item-detail' product.slug product.id %}">
                                         <span class="bg-overlay" style="width: 100%; height: 224px;"></span>
-                                        <img style="width: 100%;" src="{{ product.imageURL }}" class="img-responsive" alt="">
+                                        <img style="width: 85%; padding-top: 20px;padding-left: 40px;" src="{{ product.imageURL }}" class="img-responsive" alt="">
                                         </a>
                                    </figure>
-                                    <a href="{% url 'item-detail' product.slug product.id %}" style="text-decoration: none;"><h3>{{ product.name }}</h3></a>
+                                    <a href="{% url 'item-detail' product.slug product.id %}">
+                                        <h3>{{ product.name }}</h3>
+                                    </a>
                                 </div>
                             {% endfor %}
                         </div>
@@ -90,21 +96,21 @@
            <div class="pagination">
                 <span class="step-links" style="color: black; display: inline-flex">
                     {% if page_obj.has_previous %}
-                        <a href="?page=1" style="color: black; margin-right: 30px;">&laquo; Начало</a>
-                        <a href="?page={{ page_obj.previous_page_number }}" style="color: black; margin-right: 30px;">{{ page_obj.previous_page_number }}</a>
+                        <a href="?page=1" class="btn btn-white" style="margin-right: 10px;">&laquo; Начало</a>
+                        <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-white">{{ page_obj.previous_page_number }}</a>
                     {% endif %}
 
-                    <span class="current" style="cursor:pointer;border: 1px solid;padding: 2px 5px 2px 5px;">{{ page_obj.number }}</span>
+                    <span class="current btn btn-white" style="margin: 0 10px 0 10px;">{{ page_obj.number }}</span>
 
                     {% if page_obj.has_next %}
-                        <a href="?page={{ page_obj.next_page_number }}" style="border: 1px solid;padding: 2px 5px 2px 5px;">{{ page_obj.next_page_number }}</a>
-                        <a href="?page={{ page_obj.paginator.num_pages }}" style="border: 1px solid;padding: 2px 5px 2px 5px;">Конец &raquo;</a>
+                        <a href="?page={{ page_obj.next_page_number }}" class="btn btn-white">{{ page_obj.next_page_number }}</a>
+                        <a href="?page={{ page_obj.paginator.num_pages }}" class="btn btn-white" style="margin-left: 10px;">Конец &raquo;</a>
                     {% endif %}
                 </span>
                 <br>
-                <span class="current" style="border: 1px solid; padding: 2px 5px 2px 5px">
+                {% comment %}<span style="margin-right: 10px">
                     Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
-                </span>
+                </span>{% endcomment %}
            </div>
         </div>
     </div>
