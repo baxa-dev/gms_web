@@ -51,7 +51,7 @@ class SubCategory(models.Model):
     #     super(SubCategory, self).save(*args, **kwargs)
 
     def __str__(self):
-        return f"{self.sub_category} = {self.slug}"
+        return f"{self.sub_category} -> {self.category_slug.category}"
 
     class Meta:
         verbose_name = "Подкатегория"
