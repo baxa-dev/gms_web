@@ -175,7 +175,7 @@ top:-120px;
 
 header div#logo {
 display: inline-block;
-height: 100%;
+/*height: 100%;*/
 float: left;
 font-family: "Oswald", sans-serif;
 font-size: 72px;
@@ -271,7 +271,7 @@ display:none;
 
 header.de_header_2{
 	height:125px;
-	margin-bottom: 100px !important;
+	margin-bottom: 100px;
 }
 
 header.de_header_2.smaller {
@@ -6219,7 +6219,11 @@ h1.big{
 .padding-sm-40{padding:40px !important;}
 
 }
-
+@media only screen and (min-width: 320px) and (max-width: 480px){
+	header.de_header_2{
+		margin-bottom: 0;
+	}
+}
 
 /* --------------------------------------------------
 design for 480px

@@ -534,7 +534,7 @@
                             <!-- gallery item -->
                             <div class="item education isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px); background-size: cover;">
                                 <div class="picframe" style="height: 258px; background-size: cover;">
-                                    <a href="{% url 'item-detail' product.id %}">
+                                    <a href="{% url 'item-detail' product.slug product.id %}">
                                         <span class="overlay" style="opacity: 0;">
                                             <span class="pf_text">
                                                 <span class="project-name">{{ product.name }}</span>
@@ -546,179 +546,6 @@
                             </div>
                             <!-- close gallery item -->
                         {% endfor %}
-
-                        {% comment %}<!-- gallery item -->
-                        <div class="item commercial education isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 268px, 0px); background-size: cover;">
-                            <div class="picframe" style="height: 258px; background-size: cover;">
-                                <a href="">
-                                    <span class="overlay" style="opacity: 0;">
-                                        <span class="pf_text">
-                                            <span class="project-name">Contemporary Building</span>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <img src="{% static 'images/portfolio/pf%20%282%29.jpg' %}" alt="" style="width: 100%; height: auto;">
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                        <!-- gallery item -->
-                        <div class="item commercial hospitaly isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 536px, 0px); background-size: cover;">
-                            <div class="picframe" style="height: 257px; background-size: cover;">
-                                <a href="">
-                                    <span class="overlay" style="opacity: 0; width: 381px; height: 254px;">
-                                        <span class="pf_text" style="margin-top: 117px; opacity: 0;">
-                                            <span class="project-name">Twin Tower</span>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <img src="{% static 'images/portfolio/pf%20%283%29.jpg' %}" alt="" style="width: 100%; height: 100%; margin-left: 0px; margin-top: 0px;">
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                        <!-- gallery item -->
-                        <div class="item commercial hospitaly isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 803px, 0px); background-size: cover;">
-                            <div class="picframe" style="height: 258px; background-size: cover;">
-                                <a href="">
-                                    <span class="overlay" style="opacity: 0;">
-                                        <span class="pf_text">
-                                            <span class="project-name">Modern Skyline</span>
-                                        </span>
-                                    </span>
-                                </a>
-                                <img src="{% static 'images/portfolio/pf%20%284%29.jpg' %}" alt="" style="width: 100%; height: auto;">
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                        <!-- gallery item -->
-                        <div class="item office commercial isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 1071px, 0px); background-size: cover;">
-                            <div class="picframe" style="height: 258px; background-size: cover;">
-                                <a href="">
-                                    <span class="overlay" style="opacity: 0;">
-                                        <span class="pf_text">
-                                            <span class="project-name">Modern Office</span>
-                                        </span>
-                                    </span>
-                                </a>
-                                <img src="{% static 'images/portfolio/pf%20%285%29.jpg' %}" alt="" style="width: 100%; height: auto;">
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                        <!-- gallery item -->
-                        <div class="item residential isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 1339px, 0px); background-size: cover;">
-                            <div class="picframe" style="height: 258px; background-size: cover;">
-                                <a href="">
-                                    <span class="overlay" style="opacity: 0;">
-                                        <span class="pf_text">
-                                            <span class="project-name">Country Side House</span>
-                                        </span>
-                                    </span>
-                                </a>
-                                <img src="{% static 'images/portfolio/pf%20%286%29.jpg' %}" alt="" style="width: 100%; height: auto;">
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                        <!-- gallery item -->
-                        <div class="item office education isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 1607px, 0px); background-size: cover;">
-                            <div class="picframe" style="height: 258px; background-size: cover;">
-                                <a href="">
-                                    <span class="overlay" style="opacity: 0;">
-                                        <span class="pf_text">
-                                            <span class="project-name">Cube Office</span>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <img src="{% static 'images/portfolio/pf%20%287%29.jpg' %}" alt="" style="width: 100%; height: auto;">
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                        <!-- gallery item -->
-                        <div class="item residential isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 1875px, 0px); background-size: cover;">
-                            <div class="picframe" style="height: 258px; background-size: cover;">
-                                <a href="">
-                                    <span class="overlay" style="opacity: 0;">
-                                        <span class="pf_text">
-                                            <span class="project-name">London Luxury House</span>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <img src="{% static 'images/portfolio/pf%20%288%29.jpg' %}" alt="" style="width: 100%; height: auto;">
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                        <!-- gallery item -->
-                        <div class="item office isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 2143px, 0px); background-size: cover;">
-                            <div class="picframe" style="height: 258px; background-size: cover;">
-                                <a href="">
-                                    <span class="overlay" style="opacity: 0;">
-                                        <span class="pf_text">
-                                            <span class="project-name">Uptown University</span>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <img src="{% static 'images/portfolio/pf%20%289%29.jpg' %}" alt="" style="width: 100%; height: auto;">
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                        <!-- gallery item -->
-                        <div class="item residential isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 2411px, 0px); background-size: cover;">
-                            <div class="picframe" style="height: 258px; background-size: cover;">
-                                <a href="">
-                                    <span class="overlay" style="opacity: 0;">
-                                        <span class="pf_text">
-                                            <span class="project-name">Sentra Hospital</span>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <img src="{% static 'images/portfolio/pf%20%2810%29.jpg' %}" alt="" style="width: 100%; height: auto;">
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                        <!-- gallery item -->
-                        <div class="item hospitaly isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 2679px, 0px); background-size: cover;">
-                            <div class="picframe" style="height: 258px; background-size: cover;">
-                                <a href="">
-                                    <span class="overlay" style="opacity: 0;">
-                                        <span class="pf_text">
-                                            <span class="project-name">Deluxe Residence</span>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <img src="{% static 'images/portfolio/pf%20%2811%29.jpg' %}" alt="" style="width: 100%; height: auto;">
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                        <!-- gallery item -->
-                        <div class="item commercial isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 2947px, 0px); background-size: cover;">
-                            <div class="picframe" style="height: 258px; background-size: cover;">
-                                <a href="">
-                                    <span class="overlay" style="opacity: 0;">
-                                        <span class="pf_text">
-                                            <span class="project-name">Suburban Office</span>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <img src="{% static 'images/portfolio/pf%20%2812%29.jpg' %}" alt="" style="width: 100%; height: auto;">
-                            </div>
-                        </div>
-                        <!-- close gallery item -->{% endcomment %}
                     </div>
                 </div>
             </section>
@@ -732,11 +559,11 @@
                                 <h2 class="wow fadeInUp">Комментарии<span class="tiny-border"></span></h2>
 
                                 <ul class="testimonial-list wow fadeIn" data-wow-delay=".25s">
-                                    <li>They were so friendly and it was pleasure to get my tasks done. I'm very happy with services their provided. I will recommend this company to my family and friends. Their works is professional and their pricing was competitive.
-                                            <span>Alex, Customer</span>
+                                    <li>Они были такими дружелюбными, и мне было приятно выполнять свои задачи. Я очень доволен услугами, которые они предоставили. Буду рекомендовать эту компанию своим родным и друзьям. Их работы профессиональны, и их цены были конкурентоспособными.
+                                            <span>Алексей, покупатель</span>
                                     </li>
-                                    <li>A wonderful works, Thank you! The best construction company in town as it proved by quality of works and services. Their services make my feel so special. I always enjoy coming here, i would definitely return for future projects.
-                                            <span>Ben, Customer</span>
+                                    <li>Замечательные работы, Спасибо! Лучшая строительная компания города, что подтверждается качеством работ и услуг. Их услуги заставляют меня чувствовать себя таким особенным. Мне всегда нравится приходить сюда, я обязательно вернусь для будущих проектов.
+                                            <span>Бен, покупатель</span>
                                     </li>
                                 </ul>
                             </div>
