@@ -233,7 +233,9 @@
                     {% endif %}
                 {% endfor %}
             </div>
-            <a href="{% url 'services' %}" style="float: right; color: #fff; border:1px solid" class="btn btn-outline-danger">Посмотреть все</a>
+            <div style="float: left;" class="col-3 col-sm-6 col-md-8 col-lg-12">
+                <a href="{% url 'services' %}" style="float: right; color: #fff; border:1px solid" class="btn btn-outline-danger">Посмотреть все</a>
+            </div>
         </div>
     </section>
 
@@ -261,7 +263,9 @@
                     {% endif %}
                 {% endfor %}
             </div>
-            <a href="{% url 'products' %}" style="float: right; color: darkred; border:1px solid" class="btn btn-outline-danger">Посмотреть все</a>
+            <div style="float: left;" class="col-3 col-sm-5 col-md-8 col-lg-12">
+                <a href="{% url 'products' %}" style="float: right; color: darkred; border:1px solid" class="btn btn-outline-danger">Посмотреть все</a>
+            </div>
         </div>
     </section>
 
@@ -281,13 +285,13 @@
                                             <span>Александр, Потребитель</span>
                                         </li>
                                     </div>
-                                    <div class="owl-item" style="width: 690px;">
-                                        <li>Замечательные работы, Спасибо! Лучшая строительная компания города, что подтверждается
+                                   {% comment %} <div class="owl-item" style="width: 690px;">
+                                        <li class="col-3 col-sm-5 col-md-8 col-lg-12">Замечательные работы, Спасибо! Лучшая строительная компания города, что подтверждается
                                             качеством работ и услуг. Их услуги заставляют меня чувствовать себя таким особенным.
                                             Мне всегда нравится приходить сюда, я обязательно вернусь для будущих проектов.
                                             <span>Баходир, Потребитель</span>
                                         </li>
-                                    </div>
+                                    </div>{% endcomment %}
                                 </div>
                             </div>
 

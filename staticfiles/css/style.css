@@ -1559,7 +1559,7 @@ color:#fff;
 }
 
 a.btn-line-white:hover{
-color:#000;
+color:#000 !important;
 }
 
 a.btn-line-white:hover:before{
