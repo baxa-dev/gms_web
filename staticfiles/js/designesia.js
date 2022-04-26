@@ -1002,7 +1002,7 @@
 		// navigation for mobile
 		// --------------------------------------------------
 		jQuery('#menu-btn').on("click", function() {
-				if (mobile_menu_show == 0) {
+				if (mobile_menu_show === 0) {
 					jQuery('#mainmenu').slideDown();
 					mobile_menu_show = 1;
 				} else {
@@ -1011,7 +1011,7 @@
 				}
 			})
 		jQuery("a.btn").on("click", function(evn) {
-			if (this.href.indexOf('#') == 0) {
+			if (this.href.indexOf('#') === 0) {
 				evn.preventDefault();
 				jQuery('html,body').scrollTo(this.hash, this.hash);
 			}

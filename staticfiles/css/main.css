@@ -30,6 +30,9 @@
 div .btn{
     color: #9F080E;
 }
+#section-deco-3:hover{
+    background-color: #000;
+}
 div .btn:hover{
     color: #FFFFFF;
     border-color: transparent;
