@@ -607,7 +607,7 @@ background:#18191b;
 /* section */
 /* ================================================== */
 section{padding:80px 0 80px 0;}
-#section-deco-3{padding:0px 0 0px 0;}
+#section-deco-3{padding:0px 0 0px 0; !important;}
 section{background:#18191b;}
 
 .de-navbar-left .container-fluid .container{
