@@ -121,7 +121,21 @@ def services_view(request):
 
 def news_view(request):
     news = News.objects.all()
-    context = {'news': news}
+
+    page_num = request.GET.get("page")
+    paginator = Paginator(news, 6)
+    page_obj = paginator.get_page(page_num)
+    pge = paginator.num_pages
+    print(pge)
+
+    try:
+        news = paginator.page(page_num)
+    except PageNotAnInteger:
+        news = paginator.page(1)
+    except EmptyPage:
+        news = paginator.page(paginator.num_pages)
+
+    context = {'news': news, 'page_obj': page_obj}
     return render(request=request, template_name='news.html', context=context)
 
 

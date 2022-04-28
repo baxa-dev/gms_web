@@ -607,7 +607,7 @@ background:#18191b;
 /* section */
 /* ================================================== */
 section{padding:80px 0 80px 0;}
-#section-deco-3{padding:0px 0 0px 0; !important;}
+#section-deco-3{padding:0 0 0 0; !important;}
 section{background:#18191b;}
 
 .de-navbar-left .container-fluid .container{
@@ -1624,7 +1624,7 @@ opacity:.8;
 }
 
 .btn-fx.btn-custom{
-text-transform:normal;
+text-transform: normal;
 }
 
 a.btn-bg-dark{
@@ -2158,8 +2158,8 @@ text-shadow:none;
 color:#eceff3;
 font-size: 40px;
 padding: 40px;
-width: 120x;
-height: 120x;
+width: 120px;
+height: 120px;
 text-align: center;
 border:none;
 border-radius:10px;
@@ -5677,7 +5677,7 @@ padding-top: 0px;
 
 @media only screen and (max-width: 3000px){
 	#section-hero-5{
-	background:url(../images/background/bg-14.jpg) top fixed no-repeat !important;
+	background:url(../images/background/subheader-project-11.jpg) top fixed no-repeat !important;
 	height: 560px !important;
 }
 }
