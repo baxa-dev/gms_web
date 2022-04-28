@@ -20,9 +20,10 @@
         <section id="section-hero-5" class="full-height text-light relative" data-stellar-background-ratio=".2">
 
             <div class="center-y fadeScroll relative" data-scroll-speed="2">
+
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 col-sm-4 col-4">
+                        <div class="col-md-6 col-sm-12 col-4">
                             <div class="spacer-double"></div>
                             <h1 class="size40 wow fadeInRight" data-wow-delay=".5s">GREAT MASTER STEEL<span class="tiny-border"></span></h1>
                             <div class="spacer-single"></div>
@@ -42,7 +43,7 @@
         <section id="section-fun-facts" class="text-light pt30 pb30" style="background-color: #000" data-bgcolor="#222222">
             <div class="container">
 
-                <div class="row col-4 col-sm-6 col-md-8 col-lg-12">
+                <div class="row col-4 col-sm-12 col-md-12 col-lg-12">
                     <div class="col-md-3 wow fadeIn" data-wow-delay="0">
                         <div class="de_count col-11">
                             <h3 class="timer" data-to="10" data-speed="2500">10</h3>
@@ -77,8 +78,9 @@
 
         <!-- section begin -->
         <section id="section-deco-3" class="text-light" data-stellar-background-ratio=".2">
+    <div class="color-overlay pt80 pb80" style="background-size: cover">
             <div class="container">
-                <div class="row col-3 col-sm-5 col-md-8 col-lg-12">
+                <div class="row col-3 col-sm-12 col-md-12 col-lg-12">
                     <div class="spacer-double"></div>
                     <!-- feature box begin -->
                     <div class="feature-box-small-icon col-md-4 wow fadeIn" data-wow-delay="0">
@@ -171,12 +173,14 @@
                     <div class="spacer-double"></div>
                 </div>
             </div>
+        </div>
+
         </section>
         <!-- section close -->
 
         <section id="section-deco-2" class="no-bottom" data-stellar-background-ratio=".2" style="background-position: 50% -40.8px; background-size: cover;">
             <div class="container" style="background-size: cover;">
-                <div class="row col-4 col-sm-6 col-md-8 col-lg-12" style="background-size: cover;">
+                <div class="row col-4 col-sm-12 col-md-12 col-lg-12" style="background-size: cover;">
                     <div class="col-md-6 col-11" style="background-size: cover;">
                         <h2>О комании<span class="tiny-border"></span></h2>
 
@@ -200,7 +204,7 @@
 
                     </div>
 
-                    <div class="col-md-6" style="background-size: cover;">
+                    <div class="col-md-6 mt-md-5 pt-md-5 pl-md-5" style="background-size: cover;">
                         <img src="{% static 'images/misc/team-1.png' %}" class="img-responsive mt-20" alt="">
                     </div>
 
@@ -210,16 +214,16 @@
         </section>
     </div>
 
-    <section id="section-services" class="text-light" data-bgcolor="#222222" style="background-color: rgb(34, 34, 34); background-size: cover;">
+    <section id="section-services" class="text-light pt-5 pb-5" data-bgcolor="#222222" style="background-color: rgb(34, 34, 34); background-size: cover;">
         <div class="container" style="background-size: cover;">
-            <div class="row col-4 col-sm-6 col-md-8 col-lg-12" style="background-size: cover;">
+            <div class="row col-4 col-sm-12 col-md-12 col-lg-12" style="background-size: cover;">
                 <div class="col-md-12" style="background-size: cover;">
                     <h2 class="wow fadeInUp">Наши услуги<span class="tiny-border"></span></h2>
                 </div>
                 <div class="spacer-single" style="background-size: cover;"></div>
                 {% for service in services %}
                     {% if service.on_main %}
-                        <div class="col-md-4 col-sm-6 mb30 name" style="background-size: cover;">
+                        <div class="col-md-4 col-sm-12 mb30 name" style="background-size: cover;">
                             <figure class="pic-hover hover-scale mb20">
                                 <a href="{% url 'item-detail' service.slug service.id %}">
                                     <span class="bg-overlay" style="width: 100%; height: 224px;"></span>
@@ -233,7 +237,7 @@
                     {% endif %}
                 {% endfor %}
             </div>
-            <div style="float: left;" class="col-3 col-sm-6 col-md-8 col-lg-12">
+            <div style="float: left;" class="col-3 col-sm-12 col-md-12 col-lg-12">
                 <a href="{% url 'services' %}" style="float: right; color: #fff; border:1px solid" class="btn btn-outline-danger">Посмотреть все</a>
             </div>
         </div>
@@ -241,8 +245,8 @@
 
     <!-- section begin -->
     <section id="section-portfolio" aria-label="section-portfolio"  style="background-size: cover;">
-        <div class="container" style="background-size: cover;">
-            <div class="row col-4 col-sm-6 col-md-8 col-lg-12" style="background-size: cover;">
+        <div class="container pt-5 pb-5" style="background-size: cover;">
+            <div class="row col-4 col-sm-12 col-md-12 col-lg-12" style="background-size: cover;">
                 <div class="col-md-12">
                     <h2 class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Продукция<span class="tiny-border"></span></h2>
                 </div>
@@ -263,7 +267,7 @@
                     {% endif %}
                 {% endfor %}
             </div>
-            <div style="float: left;" class="col-3 col-sm-5 col-md-8 col-lg-12">
+            <div style="float: left;" class="col-3 col-sm-12 col-md-12 col-lg-12">
                 <a href="{% url 'products' %}" style="float: right; color: darkred; border:1px solid" class="btn btn-outline-danger">Посмотреть все</a>
             </div>
         </div>
@@ -279,7 +283,7 @@
                             <div class="owl-wrapper-outer">
                                 <div class="owl-wrapper" style="width: 2760px; left: 0px; display: block; transform: translate3d(0px, 0px, 0px); transition: all 800ms ease 0s;">
                                     <div class="owl-item" style="width: 690px;">
-                                        <li class="col-3 col-sm-5 col-md-8 col-lg-12">Они были дружелюбными, и мне было приятно выполнять свою работу.
+                                        <li class="col-3 col-sm-12 col-md-12 col-lg-12">Они были дружелюбными, и мне было приятно выполнять свою работу.
                                             Я очень доволен услугами, которые они предоставили. Буду рекомендовать эту компанию
                                             своим родным и друзьям. Их работы профессиональны, и их цены были конкурентоспособными.
                                             <span>Александр, Потребитель</span>
@@ -329,7 +333,7 @@
                                         <div class="month"></div>
                                     </div>
 
-                                    <div class="post-text col-3 col-sm-5 col-md-8 col-lg-12">
+                                    <div class="post-text col-3 col-sm-12 col-md-12 col-lg-12">
                                         <h3>{{ new.title }}</h3><br>
                                         <a href="{% url 'item-detail' new.date new.id %}" class="read_more mt10">
                                             Подробнее <i style="color: #9F080E;" class="fa fa-chevron-right id-color"></i></a>
@@ -339,7 +343,7 @@
                         {% endif %}
                     {% endfor %}
                 </ul>
-                <div style="float: right;" class="col-3 col-sm-5 col-md-8 col-lg-12">
+                <div style="float: right;" class="col-3 col-sm-12 col-md-12 col-lg-12">
                      <a href="{% url 'news' %}" style="float: right; border:1px solid; max-width: 150px;"
                         class="btn btn-outline-danger">Посмотреть все</a>
                 </div>
@@ -350,7 +354,7 @@
 
     <section> {% comment %}id="section-contact"{% endcomment %}
         <div class="container">
-            <div class="row mt-100 col-4 col-sm-6 col-md-8 col-lg-12">
+            <div class="row mt-100 col-4 col-sm-12 col-md-12 col-lg-12">
                 <div class="col-md-12 col-11 col-lg-12">
                     <div class="padding30" data-bgcolor="#f8f8f8">
                         <h2>Оставьте заявку

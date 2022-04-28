@@ -30,17 +30,17 @@
 div .btn{
     color: #9F080E;
 }
-#section-deco-3:hover{
+/*#section-deco-3:hover{
     background-color: #000;
-}
-div .btn:hover{
+}*/
+/*div .btn:hover{
     color: #FFFFFF;
     border-color: transparent;
-    /*color: #9F080E;*/
-    /*border-color: #9F080E;*/
+    !*color: #9F080E;*!
+    !*border-color: #9F080E;*!
     font-weight: bold;
     background-color: #222222;
-}
+}*/
 #section-services .btn:hover{
     color: #fff !important;
     background-color: #9F080E;

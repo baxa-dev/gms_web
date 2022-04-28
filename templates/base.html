@@ -41,7 +41,7 @@
                 <div class="info">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-8">
+                            <div class="col-md-9">
                                 <div class="col"><span class="id-color"><i style="color: #9F080E" class="fa fa-map-marker"></i></span>Республика Узбекистан, г. Ташкент</div>
                                 <div class="col"><span class="id-color"><i style="color: #9F080E" class="fa fa-clock-o"></i></span>Понедельник - Суббота 09:00-18:00</div>
                                 <div class="col"><span class="id-color"><i style="color: #9F080E" class="fa fa-phone"></i></span>+998 94 614 11 90</div>
@@ -57,7 +57,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-md-4 text-right">
+                            <div class="col-md-3 text-right">
                                 <!-- social icons -->
                                 <div class="social-icons">   {% comment %}class="сcol social"{% endcomment %}
                                     <a href="https://www.facebook.com/Gmsteeluz-105120088779161"><i class="fa fa-facebook"></i></a>
@@ -72,7 +72,7 @@
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 col-3 mt-10">
+                        <div class="col-md-12 col-sm-12 col-3 mt-10">
                             <!-- logo begin -->
                             <div id="logo">
                                 <a class="loggo" href="{% url 'home' %}">
@@ -117,12 +117,12 @@
         <!-- footer begin -->
         <footer id="section-contact">
             <div class="container">
-                <div class="row col-4 col-sm-4 col-md-4 col-lg-12">
+                <div class="row col-4 col-sm-12 col-md-12 col-lg-12">
                     <div class="map col-lg-12 col-md-12 col-sm-12 col-11 mt-30">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191884.74398227403!2d69.13928019973973!3d41.28277055717254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0cc379e9c3%3A0xa5a9323b4aa5cb98!2z0KLQsNGI0LrQtdC90YIsINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1649637597706!5m2!1sru!2s" style="border:0; width: 100%; height: 250px; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
 
-                    <div class="col-md-12">
+                    <div class="col-md-12 pt-5">
                         <h3>Контакты</h3>
                         <div class="widget widget-address">
                             <address>
@@ -148,7 +148,7 @@
 
             <div class="subfooter">
                 <div class="container">
-                    <div class="row col-4 col-sm-6 col-md-8 col-lg-12">
+                    <div class="row col-4 col-sm-12 col-md-12 col-lg-12">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-11 text-center">
                             Все права защищены  © 2022.
                         </div>
@@ -178,7 +178,7 @@
         <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
         <script src="{% static 'js/enquire.min.js' %}"></script>
         <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
-        <script src="{% static 'js/designesia.js' %}"></script>
-        <script src="{% static 'js/products.js' %}"></script>
+        {% comment %}<script src="{% static 'js/designesia.js' %}"></script>{% endcomment %}
+        <script src="{% static 'js/script.js' %}"></script>
     </body>
 </html>

@@ -148,7 +148,7 @@ background:rgba(0,0,0,0.5);
 }
 
 header.transparent{
-background:#222222;
+background:#242424;
 }
 
 header.autoshow{
@@ -225,7 +225,7 @@ top:0px;
 }
 header.smaller {
 height: 70px;
-background:rgba(50,50,50,.95);
+background:#242424;
 position:fixed;
 z-index:1200 !important;
 }
@@ -270,8 +270,8 @@ display:none;
 }
 
 header.de_header_2{
-	height:125px;
-	margin-bottom: 100px;
+	height: 45px;
+	/*margin-bottom: 100px;*/
 }
 
 header.de_header_2.smaller {
@@ -607,6 +607,7 @@ background:#18191b;
 /* section */
 /* ================================================== */
 section{padding:80px 0 80px 0;}
+#section-deco-3{padding:0px 0 0px 0;}
 section{background:#18191b;}
 
 .de-navbar-left .container-fluid .container{
@@ -1500,28 +1501,28 @@ text-transform:uppercase;
 border:solid 1px #fff;
 padding:10px 30px 10px 30px;
 }
-a.btn-fx:hover{
+/*a.btn-fx:hover{
 padding-left:20px;
 padding-right:40px;
-}
-a.btn-fx:before{
+}*/
+/*a.btn-fx:before{
 width:0;
 height:100%;
 left:0;
 top:0;
 position:absolute;
-}
-a.btn-fx:hover:after{
+}*/
+/*a.btn-fx:hover:after{
 right:15px;
 }
 a.btn-fx:hover:before{
 width:100%;
 background:rgba(0,0,0,1);
-}
-a.btn-fx.light:hover:before{
+}*/
+/*a.btn-fx.light:hover:before{
 width:100%;
 background:rgba(255,255,255,1);
-}
+}*/
 .btn-line, a.btn-line{
 color:#eceff3;
 }
@@ -1558,13 +1559,15 @@ color:#fff;
 color:#fff;
 }
 
-a.btn-line-white:hover{
+/*a.btn-line-white:hover{
 color:#000 !important;
-}
+}*/
 
+/*
 a.btn-line-white:hover:before{
 background:#fff;
 }
+*/
 
 .btn-fullwidth{
 width:100%;
@@ -5652,6 +5655,10 @@ padding-right:5px;
 #mainmenu li a:after{
 margin-left:15px;
 }
+#section-hero-5{
+	background: url(../images/background/bg-14.jpg) top fixed no-repeat;
+
+}
 
 }
 
@@ -5662,10 +5669,18 @@ design for 768px
 .slider_text {
 padding-top: 0px;
 }
+#section-hero-5{
+	background: url(../images/background/bg-14.jpg) top fixed no-repeat;
 
 }
+}
 
-
+@media only screen and (max-width: 3000px){
+	#section-hero-5{
+	background:url(../images/background/bg-14.jpg) top fixed no-repeat !important;
+	height: 560px !important;
+}
+}
 @media only screen and (max-width: 992px) {
 
 #menu-btn{
@@ -6148,7 +6163,11 @@ custom for 320px & 480px
 width: 100%;
 
 }
+#section-hero-5{
+	background: url(../images/background/bg-14.jpg) top fixed no-repeat;
+	background-size: 920px 705px !important;
 
+}
 #subheader h1{
 font-size:24px;
 }
@@ -6247,7 +6266,10 @@ design for 320px
 float:left;
 width:100% !important;
 }
+#section-hero-5{
+	background: url(../images/background/bg-14.jpg) top fixed no-repeat;
 
+}
 .text-item{
 font-size:32px;
 line-height:32px;
