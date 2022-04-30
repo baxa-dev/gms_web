@@ -1759,6 +1759,7 @@ display:none;
 
 /* divider */
 /* ------------------------------ */
+
 .spacer-single{
 width:100%;
 height:30px;
@@ -5674,12 +5675,22 @@ padding-top: 0px;
 
 }
 }
-
+@media only screen and (max-width: 1500px){
+	.center-y .spacer-double{
+		width:100%;
+		height:60px;
+		display:block;
+		clear:both;
+	}
+}
 @media only screen and (max-width: 3000px){
 	#section-hero-5{
 	background:url(../images/background/subheader-project-11.jpg) top fixed no-repeat !important;
 	height: 560px !important;
 }
+	.center-y .spacer-double{
+		display: none;
+	}
 }
 @media only screen and (max-width: 992px) {
 
