@@ -143,4 +143,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 TOKEN = env('BOT_TOKEN')
 
 CHANNEL_ID = env('CHANNEL_ID')
-
