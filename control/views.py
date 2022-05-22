@@ -166,7 +166,7 @@ def detail_view(request, slug, pk):
             form_detail.message = request.POST.get('message')
             form_detail.save()
         print("request.path: ", request.path)
-        requests.get(f"http://api.telegram.org/bot{settings.TOKEN}/sendMessage?chat_id={settings.CHANNEL_ID}&text=Поступила заявка :\n\n"
+        requests.get(f"https://api.telegram.org/bot{settings.TOKEN}/sendMessage?chat_id={settings.CHANNEL_ID}&text=Поступила заявка с сайта:\n\n"
                      f"Имя :  {name}\nНомер телефона :  {phone}\nСообщение :  {message}")
         return HttpResponseRedirect(request.path)
     else:
