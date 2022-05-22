@@ -23,7 +23,7 @@ def index_view(request):
             form_data.applier_phone = phone
             form_data.message = message
             form_data.save()
-        requests.get(f"http://api.telegram.org/bot{settings.TOKEN}/sendMessage?chat_id={settings.CHANNEL_ID}&text=Поступила заявка :\n\n"
+        requests.get(f"https://api.telegram.org/bot{settings.TOKEN}/sendMessage?chat_id={settings.CHANNEL_ID}&text=Поступила заявка с сайта:\n\n"
                      f"Имя :  {name}\nНомер телефона :  {phone}\nСообщение :  {message}")
         return HttpResponseRedirect(request.path)
     else:
